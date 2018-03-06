@@ -142,7 +142,7 @@
 <p align="center">
     <img src="./1.png" width="480"/>
 </p>   
-```html
+```javascript
 <html>
   <head>
     <style>
