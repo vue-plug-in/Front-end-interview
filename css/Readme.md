@@ -10,6 +10,7 @@
 - [**`8.如果需要手动写动画，你认为最小时间间隔是多久，为什么?`**](#动画时间间隔)
 - [**`8.stylus/sass/less区别?`**](#sass和其他的区别)
 - [**`9.postcss的作用?`**](#postcss的作用)
+- [**`10.flex布局和grid布局`**](#flex布局和grid布局)
 
 
 
@@ -134,3 +135,49 @@
 - 可以直观的理解为：它就是一个平台。为什么说它是一个平台呢？因为我们直接用它，感觉不能干什么事情，但是如果让一些插件在它上面跑，那么将会很强大
 `PostCSS` 提供了一个解析器，它能够将 `CSS` 解析成抽象语法树
 - 通过在 `PostCSS` 这个平台上，我们能够开发一些插件，来处理我们的`CSS`，比如热门的：`autoprefixer`
+
+
+## flex布局和grid布局
+> 用flex和grid实现如下布局
+<p align="center">
+    <img src="./1.png" width="480"/>
+</p>   
+```html
+<html>
+  <head>
+    <style>
+      /* flex */
+     .box {
+       display: flex;
+       flex-wrap: wrap;
+       width: 100%;
+     }
+     .box div {
+        width: calc(100% / 3 - 2px);
+        height: 100px;
+        border: 1px solid black;
+     }
+
+     /* grid */
+     .box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+     }
+
+     .box div {
+        height: 100px;
+        border: 1px solid black;
+     }
+    </style>
+  <head>
+  <body>
+    <div class="box">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>	
+  <body>
+</html>
+```
