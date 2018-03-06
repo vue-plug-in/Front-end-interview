@@ -139,9 +139,11 @@
 
 ## flex布局和grid布局
 > 用flex和grid实现如下布局
+
 <p align="center">
     <img src="./1.png" width="480"/>
 </p>   
+
 ```javascript
 <html>
   <head>
